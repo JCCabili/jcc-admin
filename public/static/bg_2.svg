@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1419.08 946.05" style="enable-background:new 0 0 1419.08 946.05;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{clip-path:url(#SVGID_2_);}
+	.st3{fill:none;stroke:#E1D6D2;stroke-width:2;stroke-miterlimit:10;}
+	.st4{clip-path:url(#SVGID_2_);fill:#F05454;}
+	.st5{clip-path:url(#SVGID_2_);fill:#30475E;}
+	.st6{fill:#30475E;}
+	.st7{fill:#F05454;}
+	.st8{fill:#A2ADB1;}
+	.st9{clip-path:url(#SVGID_4_);fill:#A2ADB1;}
+	.st10{clip-path:url(#SVGID_4_);fill:#30475E;}
+	.st11{clip-path:url(#SVGID_4_);}
+	.st12{fill:#ECE8E4;}
+</style>
+<g id="BACKGROUND" "st0">
+</g>
+<g id="OBJECTS" "st0">
+	<g "st1">
+		<defs>
+			<rect id="SVGID_1_" y="2" width="1419.08" height="946.05"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g "st2">
+			<g>
+				<circle "st3" cx="527.9" cy="13.35" r="323.55"/>
+				<circle "st3" cx="527.9" cy="13.35" r="288.31"/>
+				<circle "st3" cx="527.9" cy="13.35" r="256.28"/>
+				<circle "st3" cx="527.9" cy="13.35" r="223.17"/>
+				<circle "st3" cx="527.9" cy="13.35" r="182.6"/>
+				<circle "st3" cx="527.9" cy="13.35" r="147.36"/>
+			</g>
+		</g>
+		<path "st4" d="M0,2v321.97c104.12,66.49,187.85,100.3,300.84,16.72c138.12-102.17,62.44-245.97,289.49-234.62
+			C694.43,111.27,757.95,62.78,761.77,2H0z"/>
+		<path "st5" d="M189.96,2C343.04,130.75,464.71,131.5,582,46.66c133.39-96.49,229.88,178.8,456.92-2.84
+			c18.59-14.87,34.53-28.79,48.14-41.82H189.96z"/>
+		<g "st2">
+			<g>
+				<circle "st6" cx="56.76" cy="479.09" r="24.6"/>
+				<circle "st7" cx="56.76" cy="553.55" r="24.6"/>
+				<circle "st8" cx="56.76" cy="628.01" r="24.6"/>
+			</g>
+		</g>
+		<g "st2">
+			<g>
+				<path "st6" d="M597.25,153.53c0.01,0.32,0.02,0.63,0.02,0.95c0,27.69-22.45,50.14-50.14,50.14
+					c-27.69,0-50.14-22.45-50.14-50.14c0-0.32,0.02-0.63,0.02-0.95h-37.84c0,0.32-0.02,0.63-0.02,0.95
+					c0,48.59,39.39,87.98,87.98,87.98s87.98-39.39,87.98-87.98c0-0.32-0.02-0.63-0.02-0.95H597.25z"/>
+				<circle "st8" cx="547.13" cy="159.83" r="26.49"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Layer_3">
+	<g>
+		<defs>
+			<rect id="SVGID_3_" width="1419.08" height="946.05"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<path "st9" d="M1419.08,946.05V535.66c-108.46,59.35-70.82,325.89-210.02,264.7c-132.61-58.29-193.38,56.25-229.87,145.69
+			H1419.08z"/>
+		<path "st10" d="M1383.61,946.05c-96.52-73.37-132.12,24.39-234.01-69.86c-113.52-105.01-218.53,19.87-394.48-79.46
+			c-127.15-71.78-183.16,66.88-204.46,149.32H1383.61z"/>
+		<g "st11">
+			<g>
+				<circle "st6" cx="1360.42" cy="315.86" r="24.6"/>
+				<circle "st7" cx="1360.42" cy="390.32" r="24.6"/>
+				<circle "st8" cx="1360.42" cy="464.78" r="24.6"/>
+			</g>
+		</g>
+		<g "st11">
+			<polygon "st7" points="898.1,883.93 849.48,883.93 873.79,841.84 898.1,799.73 922.4,841.84 946.71,883.93 			"/>
+			<polygon "st12" points="1220.57,850.69 1241.33,850.69 1230.95,868.66 1220.57,886.64 1210.19,868.66 1199.82,850.69 			
+				"/>
+			<polygon "st8" points="726.73,909.34 705.98,909.34 716.35,891.37 726.73,873.39 737.11,891.37 747.49,909.34 			"/>
+		</g>
+	</g>
+</g>
+</svg>

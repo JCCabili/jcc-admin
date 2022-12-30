@@ -1,0 +1,9 @@
+version: "3"
+services:
+  portfolio-v1:
+    platform: linux/amd64
+    network_mode: bridge
+    container_name: portfolio-v1
+    image: jccabili/portfolio-v1
+    ports:
+      - "3000:3000"

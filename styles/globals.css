@@ -1,0 +1,12 @@
+@tailwind base;
+@layer base {
+    html {
+      /* @apply text-gray; */
+    }
+}
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: "#30475E";
+}
