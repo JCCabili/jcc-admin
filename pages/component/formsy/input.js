@@ -1,17 +1,4 @@
-// export const InputField = (props) => {
-//   return (
-//     <div className="mb-4 relative">
-//       {props.label && (<label className="block text-gray-lighter text-xs font-bold mb-2" for={props.name}>
-//         {props.label}
-//       </label>)}
-//       <div className="flex items-center justify-center">
-//         <input className={`py-3 px-3 grow shadow appearance-none border-none rounded-lg ${props.icon? "rounded-r-none" : ""} text-gray-darker leading-tight  focus:shadow-outline`} {...props}
-//         id={props.name}/>
-//         {props.icon && <div className="py-3 px-3 shadow appearance-none border-none rounded-lg rounded-l-none text-gray-darker leading-tight  focus:shadow-outline ">{props.icon}</div>}
-//       </div>
-//     </div>
-//   )
-// }
+
 
 import { withFormsy } from 'formsy-react';
 import React from 'react';
@@ -33,10 +20,10 @@ class InputField extends React.Component {
   render() {
     // An error message is passed only if the component is invalid
     const errorMessage = this.props.errorMessage;
-    const {name, icon, label,type} = this.props;
+    const {name, icon, label,type, onClick} = this.props;
 
     return (
-      <div className="mb-4 relative">
+      <div className="relative">
       {label && (<label className="block text-gray-lighter text-xs font-bold mb-2" for={name}>
         {label}
       </label>)}
@@ -47,7 +34,7 @@ class InputField extends React.Component {
         />
         {icon && <div className="py-3 px-3 shadow appearance-none border-none rounded-lg rounded-l-none text-gray-darker leading-tight  focus:shadow-outline ">{icon}</div>}
       </div>
-      <span className="text-danger text-xs">{errorMessage}</span>
+      <span className={`text-danger text-xs ${errorMessage? "visible": "invisible"}`}>{errorMessage}</span>
     </div>
     );
   }

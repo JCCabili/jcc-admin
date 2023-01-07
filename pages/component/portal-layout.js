@@ -1,14 +1,15 @@
 
-import Navbar from './navbar'
+
 import Head from 'next/head'
 import PortalNavbar from './portal-navbar'
 import SideBar from './flowbite/side-bar'
 import { useRouter } from 'next/router'
+import { Breadcrumb } from 'flowbite-react'
 
 
 export default function PortalLayout(props) {
   const router = useRouter();
-  console.log(router.pathname)
+  console.log(router)
   return (
     <>
       <Head>
@@ -33,15 +34,26 @@ export default function PortalLayout(props) {
         <meta property="twitter:image" content="/static/img/profile1.JPG"/ >
         <meta name="google-site-verification" content="" />
       </Head>
-      <div>
+      <div className="h-full">
         <PortalNavbar/>
-        <div className="flex h-screen">
+        <div className="flex h-full">
             <SideBar/>
-            <main className="mx-auto px-2">
-              <div className="container">
-                {props.children}
-              </div>
-            </main>
+            <div className="flex flex-col w-full">
+              <Breadcrumb className="p-3">
+                {router.route.split("/").map(i=>{
+                  if(i) {
+                    return (
+                      <Breadcrumb.Item>
+                        {i.toUpperCase()}
+                      </Breadcrumb.Item>
+                    )
+                  }
+                })}
+              </Breadcrumb>
+              <main className="w-full px-4 ">
+                  {props.children}
+              </main>
+            </div>
         </div>
       </div>
     </>

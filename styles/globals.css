@@ -10,3 +10,11 @@
 body {
   background-color: "#30475E";
 }
+
+.ReactVirtualized__Grid__innerScrollContainer {
+  max-width: none;
+  max-height: none;
+  height: auto;
+  width: auto;
+}
+

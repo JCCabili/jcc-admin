@@ -52,14 +52,16 @@ export default function Index (props) {
                   </div>
                   
                 }
-                <InputField 
-                    // validations="isEmail" validationError="Please enter a valid email." 
-                    required
-                    name="username"
-                    label="Email"
-                    placeholder="Enter your email or username."
-                    icon={<MdOutlineAlternateEmail/>}
-                  />
+                <div className='mb-3'>
+                  <InputField 
+                      required
+                      name="username"
+                      label="Email"
+                      placeholder="Enter your email or username."
+                      icon={<MdOutlineAlternateEmail/>}
+                    />
+                </div>
+                <div className='mb-3'>
                 <InputField 
                     required
                     name="password"
@@ -68,6 +70,9 @@ export default function Index (props) {
                     placeholder="Enter your password."
                     icon={<RiLockPasswordLine/>}
                   />
+                </div>
+                
+                
                   <Button label="Login" disabled={!canSubmit} type="submit" onClick={()=>console.log("Login")}/>
                   <Button label="Sign in with Google" variant="default" icon={<FcGoogle/>}/>
                 </Formsy>

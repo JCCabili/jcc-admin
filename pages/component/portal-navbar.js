@@ -25,8 +25,8 @@ export default function PortalNavbar(props) {
   }
   return (
     <Popover>
-    <div className="relative py-4 px-4 sm:px-6 lg:px-8 bg-secondary">
-      <nav className="relative flex items-center justify-between sm:h-10 " aria-label="Global">
+    <div className="py-4 px-4 sm:px-6 lg:px-8 bg-secondary">
+      <nav className="flex items-center justify-between sm:h-10 " aria-label="Global">
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
           <div className="flex items-center justify-between w-full md:w-auto">
             <a href="/">
@@ -58,7 +58,7 @@ export default function PortalNavbar(props) {
       </nav>
     </div>
 
-    <Transition
+    {/* <Transition
       as={Fragment}
       enter="duration-150 ease-out"
       enterFrom="opacity-0 scale-95"
@@ -107,6 +107,6 @@ export default function PortalNavbar(props) {
           </div>
         </div>
       </Popover.Panel>
-    </Transition>
+    </Transition> */}
   </Popover>)
 }
