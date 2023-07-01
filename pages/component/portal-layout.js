@@ -34,28 +34,35 @@ export default function PortalLayout(props) {
         <meta property="twitter:image" content="/static/img/profile1.JPG"/ >
         <meta name="google-site-verification" content="" />
       </Head>
-      <div className="h-full">
+      <div className='flex flex-col p-0 m-0'>
         <PortalNavbar/>
-        <div className="flex h-full">
-            <SideBar/>
-            <div className="flex flex-col w-full">
+        <div className='flex flex-row'>
+          <SideBar/>
+          <div className='flex bg-gray-100 w-full h-[calc(100vh-72px)]'>
+            <div className='flex flex-col w-full'>
               <Breadcrumb className="p-3">
                 {router.route.split("/").map(i=>{
                   if(i) {
                     return (
                       <Breadcrumb.Item>
-                        {i.toUpperCase()}
+                        <span className='text-xs'>{i.toUpperCase()}</span>
                       </Breadcrumb.Item>
                     )
                   }
                 })}
               </Breadcrumb>
-              <main className="w-full px-4 ">
-                  {props.children}
+              <main className="rounded-lg overflow-y-auto flex flex-col">
+                {props.children}
               </main>
             </div>
+          </div>
         </div>
+        
       </div>
+
+      {/* <div className='flex'>
+        <div className=' flex-grow-0'>Body</div>
+      </div> */}
     </>
   )
 }

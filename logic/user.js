@@ -69,3 +69,43 @@ export async function verifyUser() {
   console.log(data)
   return  data?.ClassMethod?.User?.getCurrentUser || undefined;
 }
+
+export const GET_USERS = gql`
+query Users($options: JSON, $pageCount: Int, $rowCount: Int) {
+  Model {
+    Users(options: $options, pageCount: $pageCount, rowCount: $rowCount) {
+      pageInfo {
+        endCursor
+        hasNextPage
+        page
+        rows
+      }
+      totalCount
+      edges {
+        node {
+          id
+          firstName
+          lastName
+          middleName
+          email
+          username
+          options
+          role {
+            name
+          }
+          displayName
+        }
+      }
+    }
+  }
+}
+`;
+
+
+export function getUsers(options, pageCount = 0, rowCount = 25) {
+  const { data, error, loading } = useQuery(GET_USERS, {variables: {options, pageCount, rowCount}});
+  if (error) {
+    throw new Error(error);
+  }
+  return  {data: data?.Model?.Users || undefined, error, loading };
+}

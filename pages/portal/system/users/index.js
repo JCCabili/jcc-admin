@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import List from "./list";
 import PortalLayout from "../../../component/portal-layout";
 
 const Index = (props) => {
@@ -7,11 +8,12 @@ const Index = (props) => {
     return <Fragment/>
   }
 
-  return <PortalLayout>
-  <div id="about">
-    <p className="pt-10 w-full">Users</p>
-  </div>
-</PortalLayout>
+  return (
+    <PortalLayout>
+      <List/>
+    </PortalLayout>
+  )
 }
+
 Index.auth = true
 export default Index;

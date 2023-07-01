@@ -15,10 +15,6 @@ export default function Home() {
     
       <Layout>
         <Banner/>
-        {/* <About/>
-        <Experience/>
-        <Work/>
-        <Contact/> */}
         <Footer/>
       </Layout>
       

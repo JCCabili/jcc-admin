@@ -59,18 +59,20 @@ export default function SearchTable(props) {
   }
   
   return (
-  <div>
-    <div className="flex my-2 p-3 overflow-x-auto shadow-md sm:rounded-lg items-center bg-gray-50">
-      <Formsy>
-        <InputField 
-          name="search" 
-          placeholder="Search"
-          onChange={handleSearchChange}
-          icon={<BiSearchAlt className="cursor-pointer" onClick={handleIconSearch}/>}
-          onKeyDown={handleKeyEnter}
-          value={searchValue}
-          />
-      </Formsy>
+  <div className='flex flex-col p-3'>
+    <div className="p-0 overflow-x-auto shadow-md sm:rounded-lg items-center bg-gray-50 mobile-m:p-2">
+        <Formsy>
+          <div className="max-w-[300px]">
+            <InputField 
+              name="search" 
+              placeholder="Search"
+              onChange={handleSearchChange}
+              icon={<BiSearchAlt className="cursor-pointer" onClick={handleIconSearch}/>}
+              onKeyDown={handleKeyEnter}
+              value={searchValue}
+              />
+          </div>
+        </Formsy>
     </div>
     {loading && <div className="flex justify-center w-full items-center p-4"><Spinner/></div>}
     {!loading && <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -91,16 +93,17 @@ export default function SearchTable(props) {
         </div>
       )}
     </div>}
-    {!loading && (<div className="flex mt-2 p-3 overflow-x-auto shadow-md sm:rounded-lg items-center">
+    {!loading && (<div className="flex flex-col  mt-2 p-3 overflow-x-auto shadow-md sm:rounded-lg items-center tablet:flex-row">
       <span className="mt-2 pr-3 text-xs text-gray-700 dark:bg-gray-700 dark:text-gray-400">{data?.totalCount} item(s)</span>
       {data?.totalCount > 0 && <RowCount rowCount={rowCount} setRowCount={setRowCount} setPage={setPage} pageSizes={pageSizes}/>}
       {getTotalPage() > 1 && (<Pagination
         className={"mt-0 text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400 items-center"}
+        // layout='navigation'
         currentPage={page + 1}
         totalPages={getTotalPage()}
         onPageChange={onPageChange}
       />)}
-    </div>)}
+    </div>)} 
     <div>
     </div>
   </div>  

@@ -14,8 +14,8 @@ export default function Portal(props) {
 
   return (
     <PortalLayout>
-      <div id="about">
-        <p className="pt-10 w-full">Hello {currentUser.firstName}</p>
+      <div className='p3'>
+        <p className="w-full">Hello {currentUser.firstName}</p>
       </div>
     </PortalLayout>
     

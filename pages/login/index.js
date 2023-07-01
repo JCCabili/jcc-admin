@@ -9,6 +9,7 @@ import {GrUserAdmin} from "react-icons/gr"
 import Formsy from 'formsy-react';
 import { getCurrentUser, login } from '../../logic/user';
 import { Alert } from '../component/alert';
+
 export default function Index (props) {
   const [canSubmit, setCanSubmit] = useState(false);
 
@@ -52,9 +53,11 @@ export default function Index (props) {
                   </div>
                   
                 }
+                
                 <div className='mb-3'>
-                  <InputField 
+                  <InputField
                       required
+                      id="username"
                       name="username"
                       label="Email"
                       placeholder="Enter your email or username."

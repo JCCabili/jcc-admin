@@ -9,6 +9,14 @@ module.exports = {
       "./node_modules/flowbite/**/*.js"
   ],
   theme: {
+    screens: {
+      'mobile-s': '320px',
+      'mobile-m': '375px',
+      'mobile-l': '425px',
+      'tablet': '768px',
+      'laptop': '1024px',
+      'laptop-l': '1440px',
+    },
     colors: {
       "primary": "#F05454",
       "primary-hover": "#fd3a4a",

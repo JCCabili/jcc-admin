@@ -9,6 +9,8 @@
 
 body {
   background-color: "#30475E";
+  overflow-y: hidden !important; /* this config removes extra scroll from the body. - scroll must always manually set overflow-y-scroll */
+  overflow-x: hidden !important;
 }
 
 .ReactVirtualized__Grid__innerScrollContainer {
@@ -18,3 +20,14 @@ body {
   width: auto;
 }
 
+* {
+  box-sizing: border-box;
+}
+th {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

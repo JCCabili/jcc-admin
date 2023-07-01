@@ -45,7 +45,7 @@ export default function PortalNavbar(props) {
             </div>
           </div>
         </div>
-        <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+        <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 z-0">
           {navigation.map((item) => (
             <a key={item.name} href={item.href} className="font-medium text-gray-400 hover:text-white">
               {item.name}
@@ -58,7 +58,7 @@ export default function PortalNavbar(props) {
       </nav>
     </div>
 
-    {/* <Transition
+    <Transition
       as={Fragment}
       enter="duration-150 ease-out"
       enterFrom="opacity-0 scale-95"
@@ -75,9 +75,9 @@ export default function PortalNavbar(props) {
           <div className="px-5 pt-4 flex items-center justify-between">
             <div>
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&shade=600"
-                alt=""
+                alt="Workflow"
+                className="h-8 w-auto sm:h-10"
+                src="/static/img/programmer.png"
               />
             </div>
             <div className="-mr-2">
@@ -107,6 +107,6 @@ export default function PortalNavbar(props) {
           </div>
         </div>
       </Popover.Panel>
-    </Transition> */}
+    </Transition>
   </Popover>)
 }
