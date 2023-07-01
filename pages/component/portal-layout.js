@@ -41,10 +41,10 @@ export default function PortalLayout(props) {
           <div className='flex bg-gray-100 w-full h-[calc(100vh-72px)]'>
             <div className='flex flex-col w-full'>
               <Breadcrumb className="p-3">
-                {router.route.split("/").map(i=>{
+                {router.route.split("/").map((i, index)=>{
                   if(i) {
                     return (
-                      <Breadcrumb.Item>
+                      <Breadcrumb.Item key={index}>
                         <span className='text-xs'>{i.toUpperCase()}</span>
                       </Breadcrumb.Item>
                     )

@@ -8,9 +8,9 @@ export default function Grid(props) {
   const [page, setPage] = useState(0);
   const [options, setOptions] = useState(defaultOptions);
 
-  // if (!query) {
-  //   return <Fragment/>
-  // }
+  if (!query) {
+    return <Fragment/>
+  }
   const {data, error, loading} = query(options,page, rowCount); 
   
   const list = (data?.edges || []).map(i=>Object.values(i.node)) || [];

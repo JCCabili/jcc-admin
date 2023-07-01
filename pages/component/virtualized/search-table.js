@@ -9,6 +9,10 @@ export default function SearchTable(props) {
   const {defaultOptions, query, rowCount, rowRenderer, rowHeight, className, headersRenderer } = props;
   const [page, setPage] = useState(0);
   const [options, setOptions] = useState(defaultOptions);
+  
+  if (!query) {
+    return <Fragment/>
+  }
 
   console.log(defaultOptions)
   const {data, error, loading} = query(options,page, rowCount); 

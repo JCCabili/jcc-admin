@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import { Dropdown, Pagination } from 'flowbite-react';
 import React, { Fragment, useMemo, useState } from 'react';
 import InputField from "../formsy/input"
@@ -13,6 +15,9 @@ export default function SearchTable(props) {
   const [rowCount, setRowCount] = useState(5);
   const [searchValue, setSearchValue] = useState("");
 
+  if (!query) {
+    return <Fragment/>
+  }
   const {data, error, loading} = query(options,page, rowCount); 
 
   // if (loading) {
@@ -38,11 +43,11 @@ export default function SearchTable(props) {
   }
 
   const handleSearchChange = (e) => {
-    console.log(e)
+    // console.log(e)
     setSearchValue(e.target.value)
   }
   const onPageChange = (data) => {
-    console.log(data)
+    // console.log(data)
     setPage(data - 1)
   }
 
@@ -126,8 +131,8 @@ const RowCount = (props) =>{
   return (
     <div className="mt-2 px-2">
       <Dropdown  label={rowCount} placement="top">
-      {pageSizes.map(i=>(
-        <Dropdown.Item onClick={()=>selectCount(i)}>
+      {pageSizes.map((i,index)=>(
+        <Dropdown.Item key={index}onClick={()=>selectCount(i)}>
           {i}
         </Dropdown.Item>
       ))}

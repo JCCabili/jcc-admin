@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {AutoSizer, List as VirtualList} from 'react-virtualized';
 import InputField from "../formsy/input"
@@ -10,7 +10,9 @@ export default function List(props) {
   const [page, setPage] = useState(0);
   const [options, setOptions] = useState(defaultOptions);
 
-  console.log(defaultOptions)
+  if (!query) {
+    return <Fragment/>
+  }
   const {data, error, loading} = query(options,page, rowCount); 
   
 

@@ -1,9 +1,4 @@
 @tailwind base;
-@layer base {
-    html {
-      /* @apply text-gray; */
-    }
-}
 @tailwind components;
 @tailwind utilities;
 

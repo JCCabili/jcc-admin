@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import { Fragment } from "react";
 import { getProducts } from "../../../../logic/product";
 import SearchTable from "../../../component/flowbite/table";
@@ -34,7 +36,7 @@ const List = (props) => {
           </tr>
         }
         rowRenderer={({row, index})=>(
-          <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-100">
+          <tr key={index} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-100">
               <th scope="row" className="pl-2 py-2 font-medium text-gray-900">
                   <div className="flex items-center">
                     <img src={row.productMedias.length === 0 ? "/static/img/no-pictures.png" : row.productMedias[0].url}className="h-12 w-12 rounded-lg"></img>
@@ -64,8 +66,8 @@ const ProductItemDetails = ({items}) => {
   if (items.length > 1) {
     return (
       <div className="pl-10 pt-1 invisible hidden tablet:visible tablet:block">
-        {items.map(i=>(
-          <div className="flex item-center text-gray-400">
+        {items.map((i, index)=>(
+          <div key={index} className="flex item-center text-gray-400">
               <img src={i.imgUrl ? i.imgUrl : "/static/img/no-pictures.png"}className="h-10 w-10 rounded-lg"></img>
               <p className="pl-2 whitespace-normal md:whitespace-nowrap dark:text-white">{i.data.variants.join(', ')}</p> 
               <span className="pl-2 font-medium">Stock: {i.quantity}</span>

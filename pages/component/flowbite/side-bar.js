@@ -34,16 +34,16 @@ const menu = [
 
 
 export default function SideBar(props){
-  return <aside class="w-[4rem] bg-gray-50 rounded dark:bg-gray-800 relative tablet:w-64" aria-label="Sidebar">
-  <div class="overflow-y-auto py-4 px-3">
-     <ul class="space-y-2">
-         {menu.map(m=>{
+  return <aside className="w-[4rem] bg-gray-50 rounded dark:bg-gray-800 relative tablet:w-64" aria-label="Sidebar">
+  <div className="overflow-y-auto py-4 px-3">
+     <ul className="space-y-2">
+         {menu.map((m, i)=>{
             return (
-            <li>
-               <a href={m.href} class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <li key={i}>
+               <a href={m.href} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   {m.icon}
-                  <span class="invisible hidden text-xs uppercase flex-1 ml-3 whitespace-nowrap tablet:visible tablet:inline">{m.name}</span>
-                  {/* {m.notification && <span class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-blue-800 bg-blue-200 rounded-full dark:bg-blue-700 dark:text-blue-300">{m.notification.value}</span>} */}
+                  <span className="invisible hidden text-xs uppercase flex-1 ml-3 whitespace-nowrap tablet:visible tablet:inline">{m.name}</span>
+                  {/* {m.notification && <span className="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-blue-800 bg-blue-200 rounded-full dark:bg-blue-700 dark:text-blue-300">{m.notification.value}</span>} */}
                </a>
             </li>)
          })}

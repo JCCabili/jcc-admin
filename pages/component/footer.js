@@ -1,4 +1,4 @@
-import Links from './links'
+// import Links from './links'
 import {SiTailwindcss} from "react-icons/si"
 import {TbBrandNextjs} from "react-icons/tb"
 
@@ -9,7 +9,7 @@ export default function Footer(props) {
         
         <div className="flex justify-center pt-10">
             <div className="mt-5 sm:mt-8 content-center w-3/4 md:w-2/4 lg:w-1/4">
-              <Links size={24}/>
+              {/* <Links size={24}/> */}
             </div>
         </div>
 
