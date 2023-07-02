@@ -1,9 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import ReactDOM from 'react-dom';
-import {AutoSizer, Table, List as VirtualList} from 'react-virtualized';
-import InputField from "../formsy/input"
-import {BiSearchAlt} from "react-icons/bi"
-import Formsy from 'formsy-react';
+import {AutoSizer, Table} from 'react-virtualized';
 
 export default function SearchTable(props) {
   const {defaultOptions, query, rowCount, rowRenderer, rowHeight, className, headersRenderer } = props;

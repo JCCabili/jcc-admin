@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {AutoSizer, List as VirtualList} from 'react-virtualized';
-import InputField from "../formsy/input"
+import InputField from "../react-hook-form/input"
 import {BiSearchAlt} from "react-icons/bi"
 import Formsy from 'formsy-react';
 
@@ -20,7 +20,7 @@ export default function List(props) {
   return (
     <div className="">
       <div className="my-3 pt-4 px-4 grow shadow appearance-none border-none rounded-lg">
-        <Formsy onValidSubmit={()=>console.log()}>
+        {/* <Formsy onValidSubmit={()=>console.log()}> */}
         <div className='grid grid-cols-3'>
            <InputField 
               required
@@ -29,7 +29,7 @@ export default function List(props) {
               icon={<BiSearchAlt/>}
             />
         </div>
-        </Formsy>
+        {/* </Formsy> */}
       </div>
       <div className='p-4 bg-secondary rounded-t-lg text-white'>
           {headersRenderer}

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { Dropdown, Pagination } from 'flowbite-react';
 import React, { Fragment, useMemo, useState } from 'react';
-import InputField from "../formsy/input"
+import InputField from "../react-hook-form/input"
 import Formsy from 'formsy-react';
 import {BiSearchAlt} from "react-icons/bi"
 import {FcPrevious, FcNext} from "react-icons/fc"
@@ -66,7 +66,7 @@ export default function SearchTable(props) {
   return (
   <div className='flex flex-col p-3'>
     <div className="p-0 overflow-x-auto shadow-md sm:rounded-lg items-center bg-gray-50 mobile-m:p-2">
-        <Formsy>
+        {/* <Formsy>
           <div className="max-w-[300px]">
             <InputField 
               name="search" 
@@ -77,7 +77,19 @@ export default function SearchTable(props) {
               value={searchValue}
               />
           </div>
-        </Formsy>
+        </Formsy> */}
+        {/* <form> */}
+          <div className="max-w-[300px]">
+            <InputField 
+              name="search" 
+              placeholder="Search"
+              onChange={handleSearchChange}
+              icon={<BiSearchAlt className="cursor-pointer" onClick={handleIconSearch}/>}
+              onKeyDown={handleKeyEnter}
+              value={searchValue}
+              />
+          </div>
+        {/* </form> */}
     </div>
     {loading && <div className="flex justify-center w-full items-center p-4"><Spinner/></div>}
     {!loading && <div className="relative overflow-x-auto shadow-md sm:rounded-lg">

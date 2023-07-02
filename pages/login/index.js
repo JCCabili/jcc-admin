@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import {Fragment, useState } from 'react'
-import InputField from '../component/formsy/input';
+import InputField from '../component/react-hook-form/input';
 import { Button } from '../component/button';
 import {FcGoogle} from "react-icons/fc"
 import {MdOutlineAlternateEmail} from "react-icons/md"
@@ -9,11 +9,12 @@ import {GrUserAdmin} from "react-icons/gr"
 import Formsy from 'formsy-react';
 import { getCurrentUser, login } from '../../logic/user';
 import { Alert } from '../component/alert';
+import { useForm } from 'react-hook-form';
 
 export default function Index (props) {
   const [canSubmit, setCanSubmit] = useState(false);
 
-  const handleSubmit = async (model) => {
+  const handleLogin = async (model) => {
     try {
       await login("http://localhost:7080/rest.api/login", model);
       setErrorMessage(null);
@@ -23,6 +24,11 @@ export default function Index (props) {
       setErrorMessage("Invalid usename or password.");
     }
   }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const [errorMessage, setErrorMessage] = useState(null);
   const {data, loading } = getCurrentUser();
@@ -42,7 +48,7 @@ export default function Index (props) {
                   <span className="block inline">Welcome back!</span>
                   <p className="text-xs pt-2 text-gray-placeholder">Welcome back! please enter your details</p>
                 </h1>
-                <Formsy onValidSubmit={handleSubmit}
+                <form onSubmit={handleSubmit(handleLogin)}
                 onValid={()=>setCanSubmit(true)} 
                 onInvalid={()=>setCanSubmit(false)}
                 >
@@ -57,6 +63,7 @@ export default function Index (props) {
                 <div className='mb-3'>
                   <InputField
                       required
+                      register={register}
                       id="username"
                       name="username"
                       label="Email"
@@ -67,6 +74,7 @@ export default function Index (props) {
                 <div className='mb-3'>
                 <InputField 
                     required
+                    register={register}
                     name="password"
                     label="Password"
                     type="password"
@@ -76,9 +84,10 @@ export default function Index (props) {
                 </div>
                 
                 
-                  <Button label="Login" disabled={!canSubmit} type="submit" onClick={()=>console.log("Login")}/>
+                  {/* <Button label="Login" disabled={!canSubmit} type="submit" onClick={()=>console.log("Login")}/> */}
+                  <Button label="Login" type="submit" onClick={()=>console.log("Login")}/>
                   <Button label="Sign in with Google" variant="default" icon={<FcGoogle/>}/>
-                </Formsy>
+                </form>
                   <div className="pt-20 text-center">
                     <p className="text-xs pt-2 text-gray-placeholder">Powered by <strong>JCC Solution</strong></p>
                   </div>
