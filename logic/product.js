@@ -19,7 +19,7 @@ query Products($options: JSON, $pageCount: Int, $rowCount: Int) {
           published
           hidden
           amount
-          #specification
+          specification
           #shipping
           preOrder
           condition
@@ -37,9 +37,9 @@ query Products($options: JSON, $pageCount: Int, $rowCount: Int) {
             data
             imgURL
             amount
-            quantity
+            #quantity
           }
-          quantity
+          #quantity
         }
       }
     }
